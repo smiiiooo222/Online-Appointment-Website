@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hospital Appointment Form</title>
+  <link rel="stylesheet" href="Appstyle.css">
+  <script>
+    function saveFormData(event) {
+      event.preventDefault();
+
+      // Collect form data
+      const formData = {
+        fullName: document.getElementById('fullName').value,
+        mobileNumber: document.getElementById('mobileNumber').value,
+        email: document.getElementById('email').value,
+        appointmentDate: document.getElementById('appointmentDate').value,
+        area: document.getElementById('area').value,
+        city: document.getElementById('city').value,
+        state: document.getElementById('state').value,
+        postalCode: document.getElementById('postalCode').value,
+      };
+
+      // Save data to localStorage
+      localStorage.setItem('appointmentData', JSON.stringify(formData));
+
+      // Redirect to the report page
+      window.location.href = "payment.html";
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <div class="content">
+      <h1>Hospital Appointment Form Design</h1>
+      <p>Smart Eye Provide high-quality free website templates. All websites are developed with the latest technology, well-documented, and easy to use.</p>
+    </div>
+    <div class="form-container">
+      <form class="appointment-form" onsubmit="saveFormData(event)">
+
+        <h2>Book Appointment</h2>
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" placeholder="Enter Full Name" required>        
+        <label for="mobileNumber">Mobile Number:</label>
+        <input type="text" id="mobileNumber" placeholder="Enter Mobile Number" required>        
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" placeholder="Enter Email Address" required>        
+        <label for="appointmentDate">Appointment Date:</label>
+        <input type="date" id="appointmentDate" required>
+        <h3>Address Details</h3>
+        <label for="area">Area:</label>
+        <input type="text" id="area" placeholder="Enter Area" required>        
+        <label for="city">City:</label>
+        <input type="text" id="city" placeholder="Enter City" required>        
+        <label for="state">State:</label>
+        <input type="text" id="state" placeholder="Enter State" required>        
+        <label for="postalCode">Postal Code:</label>
+        <input type="text" id="postalCode" placeholder="Postal Code" required>
+        <button type="submit">Book Appointment</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

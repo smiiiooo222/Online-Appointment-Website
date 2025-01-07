@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardiologists</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        header {
+            background-color:#31568b;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 10px;
+        }
+        .card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .card img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        .card:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transform: scale(1.02);
+            transition: 0.3s ease;
+        }
+        .card h3 {
+            color:#31568b;
+            margin: 10px 0;
+        }
+        .rating {
+            color: #f39c12;
+            font-size: 1rem;
+            margin-top: 5px;
+        }
+        .appointment-btn{
+            height: 45px;
+            padding: 0px 2px;
+            border-radius: 4px;
+            background-color: #014dd5;
+            color: #ffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 500;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .grid .card {
+            flex: 1 1 calc(33.333% - 40px);
+            margin: 10px;
+        }
+        @media screen and (max-width: 768px) {
+            .grid .card {
+                flex: 1 1 calc(50% - 20px);
+            }
+        }
+        @media screen and (max-width: 480px) {
+            .grid .card {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Top Cardiologists</h1>
+    </header>
+    <div class="container">
+        <div class="grid">
+            <div class="card">
+                <img src="d2.png" alt="Dr. John Smith">
+                <h3>Dr. Ashok Agarwal</h3>
+                <p>Experience: 15 years</p>
+                <p class="rating">Rating: ★★★★★ (4.9)</p>
+                <a href="appoinment.html" class="appointment-btn">Appointment</a>
+            </div>
+            <div class="card">
+                <img src="payal.png" alt="Dr. Sarah Johnson">
+                <h3>Dr. Payal Sahoo</h3>
+                <p>Experience: 10 years</p>
+                <p class="rating">Rating: ★★★★☆ (4.5)</p>
+                <a href="appoinment.html" class="appointment-btn">Appointment</a>
+            </div>
+            <div class="card">
+                <img src="vishal.png" alt="Dr. Emily Davis">
+                <h3>Dr.Vishal Tiwari</h3>
+                <p>Experience: 8 years</p>
+                <p class="rating">Rating: ★★★★★ (4.8)</p>
+                <a href="appoinment.html" class="appointment-btn">Appointment</a>
+            </div>
+            <div class="card">
+                <img src="tinaa.png" alt="Dr. Michael Brown">
+                <h3>Dr.Sushree Smita Swain</h3>
+                <p>Experience: 12 years</p>
+                <p class="rating">Rating: ★★★★☆ (4.6)</p>
+                <a href="appoinment.html" class="appointment-btn">Appointment</a>
+            </div>
+            <div class="card">
+                <img src="dibya.png" alt="Dr. Olivia Wilson">
+                <h3>Dr.Dibya Ranjan Sahoo</h3>
+                <p>Experience: 7 years</p>
+                <p class="rating">Rating: ★★★★★ (4.7)</p>
+                <a href="appoinment.html" class="appointment-btn">Appointment</a>
+            </div>
+            <div class="card">
+                <img src="d10.png" alt="Dr. Daniel Martinez">
+                <h3>Dr. Daniel Martinez</h3>
+                <p>Experience: 20 years</p>
+                <p class="rating">Rating: ★★★★★ (4.9)</p>
+                <a href="appoinment.html" class="appointment-btn">Appointment</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

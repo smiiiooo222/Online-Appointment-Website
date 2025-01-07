@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Doctor Appointment System</title>
+    <link rel="stylesheet" href="dashbord.css">
+</head>
+<body>
+    <div class="dashboard">
+        <header class="header">
+            <h1>Appointment Dashboard</h1>
+            <nav>
+                <ul>
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#appointments">Appointments</a></li>
+                    <li><a href="#settings">Settings</a></li>
+                    <li><a href="#logout">Logout</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section id="overview" class="card">
+                <h2>Overview</h2>
+                <div class="stats">
+                    <div class="stat">
+                        <h3>Total Appointments</h3>
+                        <p id="totalAppointments">0</p>
+                    </div>
+                    <div class="stat">
+                        <h3>Doctors</h3>
+                        <p>5</p>
+                    </div>
+                    <div class="stat">
+                        <h3>Patients</h3>
+                        <p>25</p>
+                    </div>
+                </div>
+            </section>
+            <section id="appointments" class="card">
+                <h2>Confirm Appointments</h2>
+                <form id="appointmentForm">
+                    <label for="patientName">Patient Name:</label>
+                    <input type="text" id="patientName" required>
+                    <label for="doctorName">Doctor Name:</label>
+                    <input type="text" id="doctorName" required>
+                    <label for="date">Date:</label>
+                    <input type="date" id="date" required>
+                    <label for="time">Time:</label>
+                    <input type="time" id="time" required>
+                    <label for="phone">Phone Number:</label>
+                    <input type="number" id="phone" required>
+                    <button type="submit">Add Appointment</button>
+                </form>
+                <table id="appointmentTable">
+                    <thead>
+                        <tr>
+                            <th>Patient</th>
+                            <th>Doctor</th>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>phone</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Appointments will appear here -->
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doctor List</title>
+  <link rel="stylesheet" href="docstyle.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>We-Care</h1>
+    </header>
+    <aside class="sidebar">
+      <ul>
+        <li><a href="catagory.html" class="active">Doctor Catagories</a></li>
+        <li class="active">Doctors</li>
+      </ul>
+    </aside>
+    <main>
+      <div class="header">
+        <h2>Top Doctor List</h2>
+        
+      </div>
+      <div class="doctor-grid">
+        <!-- Repeat doctor card structure below -->
+        <div class="doctor-card">
+          <img src="d7.png" alt="Doctor">
+          <h3>Dr. Kastub Malhotra</h3>
+          <p>Specialist: Cardiology</p>
+          <div class="rating">★★★★★</div>
+          <a href="appoinment.html" class="appointment-btn">Appointment</a>
+        </div>
+        <!-- Repeat similar cards -->
+      </div>
+      <div class="doctor-grid">
+        <!-- Repeat doctor card structure below -->
+        <div class="doctor-card card2">
+          <img src="d10.png" alt="Doctor">
+          <h3>Dr.Ashok Agarwal</h3>
+          <p>Specialist: Ophthalmologist</p>
+          <div class="rating">★★★★★</div>
+          <a href="appoinment.html" class="appointment-btn">Appointment</a>
+        </div>
+        <!-- Repeat similar cards -->
+      </div>
+      <div class="doctor-grid">
+        <!-- Repeat doctor card structure below -->
+        <div class="doctor-card">
+          <img src="d9.png" alt="Doctor">
+          <h3>Dr. Mahesh Sharma</h3>
+          <p>Specialist: Neurologist</p>
+          <div class="rating">★★★★★</div>
+          <a href="appoinment.html" class="appointment-btn">Appointment</a>
+        </div>
+        <!-- Repeat similar cards -->
+      </div>
+      <div class="doctor-grid">
+        <!-- Repeat doctor card structure below -->
+        <div class="doctor-card card3">
+          <img src="d2.png" alt="Doctor">
+          <h3>Dr. Udayanath Chouhan</h3>
+          <p>Specialist: Dermatologist</p>
+          <div class="rating">★★★★★</div>
+          <a href="appoinment.html" class="appointment-btn">Appointment</a>
+        </div>
+        <!-- Repeat similar cards -->
+      </div>
+      <div class="doctor-grid">
+        <!-- Repeat doctor card structure below -->
+        <div class="doctor-card">
+          <img src="d6.png" alt="Doctor">
+          <h3>Dr. Sanjay Bansal</h3>
+          <p>Specialist: Dentist</p>
+          <div class="rating">★★★★★</div>
+          <a href="appoinment.html" class="appointment-btn">Appointment</a>
+        </div>
+        <!-- Repeat similar cards -->
+      </div>
+      <div class="doctor-grid">
+        <!-- Repeat doctor card structure below -->
+        <div class="doctor-card card4">
+          <img src="d1.png" alt="Doctor">
+          <h3>Dr. Alok Tripathy</h3>
+          <p>Specialist: Nephrologist</p>
+          <div class="rating">★★★★★</div>
+          <a href="appoinment.html" class="appointment-btn">Appointment</a>
+        </div>
+        <!-- Repeat similar cards -->
+      </div>
+       <div class="doctor-grid">
+        <!-- Repeat doctor card structure below -->
+        <div class="doctor-card">
+          <img src="d5.png" alt="Doctor">
+          <h3>Dr. Akhil Satpathy</h3>
+          <p>Specialist: Pediatrict</p>
+          <div class="rating">★★★★★</div>
+          <a href="appoinment.html" class="appointment-btn">Appointment</a>
+        </div>
+        <!-- Repeat similar cards -->
+      </div>
+      <div class="doctor-grid">
+        <!-- Repeat doctor card structure below -->
+        <div class="doctor-card card5">
+          <img src="d5.png" alt="Doctor">
+          <h3>Dr. Rajveer Choudhary</h3>
+          <p>Specialist: psychiatrist</p>
+          <div class="rating">★★★★★</div>
+          <a href="appoinment.html" class="appointment-btn">Appointment</a>
+        </div>
+        <!-- Repeat similar cards -->
+      </div>
+    </main>
+  </div>
+  <script>
+    document.querySelector("button").addEventListener("click", () => {
+        alert("Add Doctor functionality coming soon!");
+      });
+      
+      document.querySelectorAll(".appointment-btn").forEach(button => {
+        button.addEventListener("click", () => {
+          alert("Booking appointment...");
+        });
+      });
+  </script>
+</body>
+</html>

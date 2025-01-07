@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Payment</title>
+  <link rel="stylesheet" href="payment.css">
+  <script>
+    function processPayment() {
+      const paymentOption = document.querySelector('input[name="payment-method"]:checked').value;
+
+      if (paymentOption === "qr") {
+        alert("Please scan the QR code and complete the payment of 1 rupee.");
+        
+        setTimeout(() => {
+          const paymentConfirmed = confirm("Payment of 1 rupee detected via QR. Do you confirm?");
+          if (paymentConfirmed) {
+            alert("Payment completed successfully!");
+            window.location.href = "thankyou.html";
+          } else {
+            alert("Please complete the payment before proceeding.");
+          }
+        }, 17000); 
+      } else if (paymentOption === "mobile") {
+        const mobileNumber = document.getElementById("mobile-number").value.trim();
+        if (!mobileNumber) {
+          alert("Please enter your mobile number.");
+          return;
+        }
+        const mobilePaymentConfirmed = confirm(`Payment initiated using mobile number: ${mobileNumber}. Have you completed the payment?`);
+        if (!mobilePaymentConfirmed) {
+          alert("Please complete the mobile number payment before proceeding.");
+          return;
+        }
+        alert("Payment completed successfully!");
+        window.location.href = "thankyou.html";
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Online Payment</h1>
+    <p>Choose your preferred payment method below:</p>
+    <div class="payment-options">
+      <label>
+        <input type="radio" name="payment-method" value="qr" checked>
+        Pay with QR Code
+      </label>
+      <div class="qr-container">
+        <img src="QR.jpg" alt="QR Code" class="qr-code">
+        <p>Scan this QR code to make a payment.</p>
+      </div>
+      <label>
+        <input type="radio" name="payment-method" value="mobile">
+        Pay with Mobile Number
+      </label>
+      <div class="mobile-payment">
+        <input type="tel" id="mobile-number" placeholder="Enter Mobile Number">
+      </div>
+    </div>
+    <button onclick="processPayment()">Proceed to Pay</button>
+  </div>
+</body>
+</html>
